@@ -9,7 +9,7 @@ NAME = 'py_translator'
 
 
 def readme():
-    with open('README_GQ.md', encoding='utf-8') as f:
+    with open('README.md', encoding='utf-8') as f:
         return f.read()
 
 
