@@ -41,7 +41,10 @@ class TokenAcquirer(object):
     # RE_TKK = re.compile(r'TKK=eval\(\'\(\(function\(\)\{(.+?)\}\)\(\)\)\'\);',
     #                     re.DOTALL)
 
-    RE_TKK = re.compile(r'TKK=\'([^\']*)\';', re.DOTALL)
+    # RE_TKK = re.compile(r'TKK=\'([^\']*)\';', re.DOTALL)
+
+    # 修改与20181129，提取google网页中的token
+    RE_TKK=re.compile(r"tkk:\'([^\']*)\'", re.DOTALL)
 
     def __init__(self, tkk='0', session=None, host='translate.google.com'):
         self.session = session or requests.Session()
